@@ -1,0 +1,224 @@
+/* =====================================================
+   VARIABLES DE COLOR – PALETA ECLÉCTICA & COOL
+   Mezcla creativa de tonos vibrantes y oscuros
+===================================================== */
+:root {
+    --bg-main: #0f0f14;           /* Fondo general oscuro elegante */
+    --bg-card: #1a1b26;           /* Fondo del contenedor */
+    --accent-coral: #ff6f61;      /* Coral vibrante (acento principal) */
+    --accent-mint: #2ee6d6;       /* Menta fresca (acento secundario) */
+    --accent-violet: #7a6cff;     /* Violeta creativo */
+    --text-main: #f2f2f2;         /* Texto principal */
+    --text-secondary: #a1a1b3;    /* Texto secundario */
+    --border-soft: #2e2f3e;       /* Bordes discretos */
+    --error-color: #ff4d6d;       /* Color para errores */
+}
+
+/* =====================================================
+   1. SELECTORES DE ETIQUETA
+===================================================== */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: radial-gradient(circle at top, #1a1b26, var(--bg-main));
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent-coral);
+    margin-bottom: 8px;
+    letter-spacing: 1.5px;
+}
+
+p {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+/* Estilos base para todos los campos */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-soft);
+    border-radius: 8px;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+}
+
+select option {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+}
+
+button {
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+}
+
+/* =====================================================
+   2. SELECTORES DE CLASE
+===================================================== */
+.container {
+    background-color: var(--bg-card);
+    padding: 40px;
+    width: 100%;
+    max-width: 520px;
+    border-radius: 18px;
+
+    /* Efecto tarjeta moderna */
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+
+    position: relative;
+}
+
+/* Halo decorativo detrás del formulario */
+.container::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    background: linear-gradient(
+        120deg,
+        var(--accent-violet),
+        transparent,
+        var(--accent-mint)
+    );
+    filter: blur(25px);
+    opacity: 0.25;
+    z-index: -1;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    flex: 1;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Botón principal */
+.btn-primary {
+    background: linear-gradient(
+        90deg,
+        var(--accent-coral),
+        var(--accent-violet)
+    );
+    color: #0f0f14;
+    box-shadow: 0 10px 20px rgba(122, 108, 255, 0.35);
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-soft);
+    color: var(--text-secondary);
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terminos-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* =====================================================
+   3. SELECTORES DE ID
+===================================================== */
+#terminos {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-mint);
+    cursor: pointer;
+}
+
+#mensaje {
+    resize: vertical;
+}
+
+/* =====================================================
+   4. PSEUDOCLASES – ESTADOS
+===================================================== */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-mint);
+    background-color: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(46, 230, 214, 0.25);
+}
+
+/* Hover botones */
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(255, 111, 97, 0.45);
+}
+
+.btn-secondary:hover {
+    color: var(--accent-mint);
+    border-color: var(--accent-mint);
+}
+
+/* Campos inválidos */
+input:not(:placeholder-shown):invalid,
+select:not(:placeholder-shown):invalid,
+textarea:not(:placeholder-shown):invalid {
+    border-color: var(--error-color);
+    box-shadow: 0 0 0 2px rgba(255, 77, 109, 0.3);
+}
+
+/* =====================================================
+   5. PSEUDOELEMENTOS
+===================================================== */
+::placeholder {
+    color: rgba(161, 161, 179, 0.5);
+}
+
+/* Indicador visual para campos obligatorios */
+.form-group label:not(.terminos-label)::after {
+    content: " *";
+    color: var(--error-color);
+    font-weight: bold;
+}
+
+/* Campo opcional "Otro" sin asterisco */
+label[for="otro-detalle"]::after {
+    content: none !important;
+}
