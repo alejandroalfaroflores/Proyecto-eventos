@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña -->
+    <title>Formulario de Contacto</title>
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="container">
+
+        <!-- Encabezado del formulario -->
+        <header>
+            <h1>Contáctame</h1>
+            <p>Completa el formulario para iniciar una colaboración profesional.</p>
+        </header>
+
+        <!-- Formulario de contacto -->
+        <form action="#" method="post" class="contact-form">
+
+            <!-- Nombre completo -->
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Ingresa tu nombre completo"
+                    required
+                >
+            </div>
+
+            <!-- Correo electrónico -->
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ejemplo@correo.com"
+                    required
+                >
+            </div>
+
+            <!-- Teléfono -->
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="55 1234 5678"
+                    required
+                >
+            </div>
+
+            <!-- Asunto -->
+            <div class="form-group">
+                <label for="asunto">Asunto / Motivo</label>
+                <select id="asunto" name="asunto" required>
+                    <option value="" disabled selected>Selecciona un asunto</option>
+                    <option value="oferta">Oferta laboral</option>
+                    <option value="colaboracion">Colaboración</option>
+                    <option value="consulta">Consulta técnica</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <!-- Campo opcional -->
+            <div class="form-group">
+                <label for="otro-detalle">Si elegiste "Otro", especifica</label>
+                <input
+                    type="text"
+                    id="otro-detalle"
+                    name="otro_detalle"
+                    placeholder="Escribe el motivo aquí..."
+                >
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    placeholder="Describe tu mensaje en detalle..."
+                    required
+                ></textarea>
+            </div>
+
+            <!-- Términos y condiciones -->
+            <div class="form-group checkbox-container">
+                <input
+                    type="checkbox"
+                    id="terminos"
+                    name="terminos"
+                    required
+                >
+                <label for="terminos" class="terminos-label">
+                    Acepto la política de privacidad y términos de uso
+                </label>
+            </div>
+
+            <!-- Botones -->
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary">
+                    Enviar mensaje
+                </button>
+
+                <button type="reset" class="btn btn-secondary">
+                    Limpiar formulario
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>

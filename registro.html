@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Participantes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+
+<header class="header">
+    <h1 class="logo">CodeEvents</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="registro.html" class="active">Registrar</a>
+        <a href="participantes.html">Participantes</a>
+    </nav>
+</header>
+
+<main class="registro">
+    <h2>Registro de Participante</h2>
+
+    <form>
+        <label>Evento
+            <select>
+                <option>Frontend Masters 2026</option>
+                <option>Backend Summit Pro</option>
+                <option>Data & AI Conference</option>
+                <option>Full Stack Dev Experience</option>
+            </select>
+        </label>
+
+        <label>Tipo de participante
+            <select>
+                <option>Asistente</option>
+                <option>Ponente</option>
+            </select>
+        </label>
+
+        <label>Nombre completo
+            <input type="text" required>
+        </label>
+
+        <label>Email
+            <input type="email" required>
+        </label>
+
+        <label>Empresa / Institución
+            <input type="text">
+        </label>
+
+        <label>Nivel de experiencia
+            <select>
+                <option>Básico</option>
+                <option>Intermedio</option>
+                <option>Avanzado</option>
+            </select>
+        </label>
+
+        <div class="acciones">
+            <button class="btn">Registrar</button>
+            <button type="reset" class="btn ghost">Cancelar</button>
+        </div>
+    </form>
+</main>
+
+</body>
+</html>
