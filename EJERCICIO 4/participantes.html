@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Participantes | CodeEvents</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estilos específicos de participantes -->
+    <style>
+        .contenedor {
+            padding: 3rem 2.5rem;
+        }
+
+        .evento-info {
+            background: var(--gris-medio);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .contadores {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* ===== PESTAÑAS CSS ONLY ===== */
+        .tabs input {
+            display: none;
+        }
+
+        .tabs label {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--gris-claro);
+            border-radius: 6px;
+            cursor: pointer;
+            margin-right: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .tabs input:checked + label {
+            background: var(--plateado);
+            color: black;
+        }
+
+        .tab-content {
+            display: none;
+            margin-top: 1.5rem;
+        }
+
+        #tab-asistentes:checked ~ .asistentes,
+        #tab-ponentes:checked ~ .ponentes,
+        #tab-estadisticas:checked ~ .estadisticas {
+            display: block;
+        }
+
+        /* ===== TABLAS ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--gris-medio);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 0.8rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--gris-oscuro);
+        }
+
+        th {
+            background: var(--gris-oscuro);
+        }
+
+        tr:hover {
+            background: #333;
+        }
+
+        .badge {
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            background: var(--plateado);
+            color: black;
+        }
+
+        .badge.ponente {
+            background: #d4af37;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <h1 class="logo">CodeEvents</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="registro.html">Registrar Participante</a>
+        <a href="participantes.html" class="active">Participantes</a>
+    </nav>
+</header>
+
+<main class="contenedor">
+
+    <!-- INFO EVENTO -->
+    <section id="frontend" class="evento-info">
+        <h2>Frontend Masters 2026</h2>
+        <p>10 Marzo 2026 · CDMX · Centro de Convenciones</p>
+        <div class="contadores">
+            <span>👥 6 asistentes</span>
+            <span>🎤 4 ponentes</span>
+        </div>
+    </section>
+
+    <!-- PESTAÑAS -->
+    <div class="tabs">
+        <input type="radio" name="tab" id="tab-asistentes" checked>
+        <label for="tab-asistentes">Asistentes</label>
+
+        <input type="radio" name="tab" id="tab-ponentes">
+        <label for="tab-ponentes">Ponentes</label>
+
+        <input type="radio" name="tab" id="tab-estadisticas">
+        <label for="tab-estadisticas">Estadísticas</label>
+
+        <!-- ASISTENTES -->
+        <div class="tab-content asistentes">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Empresa</th>
+                        <th>Experiencia</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana López</td>
+                        <td>ana@mail.com</td>
+                        <td>TechSoft</td>
+                        <td>Intermedio</td>
+                        <td><span class="badge">Asistente</span></td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Ruiz</td>
+                        <td>carlos@mail.com</td>
+                        <td>DevCorp</td>
+                        <td>Avanzado</td>
+                        <td><span class="badge">Asistente</span></td>
+                    </tr>
+                    <tr>
+                        <td>María Torres</td>
+                        <td>maria@mail.com</td>
+                        <td>FrontendLab</td>
+                        <td>Básico</td>
+                        <td><span class="badge">Asistente</span></td>
+                    </tr>
+                    <tr>
+                        <td>José Ramírez</td>
+                        <td>jose@mail.com</td>
+                        <td>WebWorks</td>
+                        <td>Intermedio</td>
+                        <td><span class="badge">Asistente</span></td>
+                    </tr>
+                    <tr>
+                        <td>Sofía Mendoza</td>
+                        <td>sofia@mail.com</td>
+                        <td>UX Studio</td>
+                        <td>Básico</td>
+                        <td><span class="badge">Asistente</span></td>
+                    </tr>
+                    <tr>
+                        <td>Daniel Ortega</td>
+                        <td>daniel@mail.com</td>
+                        <td>CodeMX</td>
+                        <td>Avanzado</td>
+                        <td><span class="badge">Asistente</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- PONENTES -->
+        <div class="tab-content ponentes">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Ponencia</th>
+                        <th>Duración</th>
+                        <th>Empresa</th>
+                        <th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laura Méndez</td>
+                        <td>Arquitectura Frontend Moderna</td>
+                        <td>60 min</td>
+                        <td>UX Studio</td>
+                        <td><span class="badge ponente">Ponente</span></td>
+                    </tr>
+                    <tr>
+                        <td>Diego Hernández</td>
+                        <td>Performance en React</td>
+                        <td>45 min</td>
+                        <td>CodePro</td>
+                        <td><span class="badge ponente">Ponente</span></td>
+                    </tr>
+                    <tr>
+                        <td>Lucía Fernández</td>
+                        <td>Accesibilidad Web</td>
+                        <td>40 min</td>
+                        <td>Inclusive Web</td>
+                        <td><span class="badge ponente">Ponente</span></td>
+                    </tr>
+                    <tr>
+                        <td>Fernando Cruz</td>
+                        <td>CSS Moderno y Escalable</td>
+                        <td>50 min</td>
+                        <td>DesignTech</td>
+                        <td><span class="badge ponente">Ponente</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ESTADÍSTICAS -->
+        <div class="tab-content estadisticas">
+            <p>📊 Distribución de experiencia:</p>
+            <ul>
+                <li>Básico: 3</li>
+                <li>Intermedio: 3</li>
+                <li>Avanzado: 4</li>
+            </ul>
+
+            <p style="margin-top:1rem;">👥 Relación:</p>
+            <ul>
+                <li>Asistentes: 6</li>
+                <li>Ponentes: 4</li>
+            </ul>
+        </div>
+
+    </div>
+</main>
+
+</body>
+</html>
+

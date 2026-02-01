@@ -1,0 +1,47 @@
+.filtros {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 2.5rem;
+}
+
+.filtros input,
+.filtros select {
+    background: var(--gris-medio);
+    border: 1px solid var(--gris-oscuro);
+    color: white;
+    padding: 0.5rem;
+}
+
+.eventos {
+    padding: 0 2.5rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.evento {
+    background: var(--gris-medio);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.evento:hover {
+    transform: translateY(-6px);
+}
+
+.info {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+}
+
+.categoria {
+    display: inline-block;
+    margin-top: 0.4rem;
+}
+
+.acciones {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
